@@ -1,0 +1,35 @@
+
+
+{% block body %}
+        <div id = wrapper>
+            <ul>
+                    <h><span> My name:</span></h>
+                        {% for i in name %}
+                            {{ i }}
+                        {% endfor %}
+                </ul><ul>
+                <h><span> My surname:</span></h>
+                {% for i in surname %}
+                    {{ i }}
+                {% endfor %}
+            </ul><ul>
+                <h><span> My birthday:</span></h>
+                {% for i in birthday %}
+                    {{ i }}
+                {% endfor %}
+            </ul><ul>
+                <h><span> My education:</span></h>
+                {% for i in edu %}
+                    {{ i }}
+                {% endfor %}
+                    </ul>
+        </div>
+    {% endblock %}
+
+{% block stylesheets %}
+        <style>
+            body { background: #F5F5F5; font: 18px/1.5 sans-serif; }
+            #wrapper { background: #FFF; margin: 1em auto; max-width: 800px; width: 95%; }
+            h { line-height: 1.2; margin: 0 0 .5em; font-size: 36px; }
+        </style>
+    {% endblock %}
